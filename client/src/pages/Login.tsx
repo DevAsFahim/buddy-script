@@ -72,7 +72,10 @@ const Login = () => {
                   {" "}
                   <span>Or</span>
                 </div>
+
+                {/* Login from */}
                 <LoginFrom />
+
                 <div className="row">
                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div className="_social_login_bottom_txt">

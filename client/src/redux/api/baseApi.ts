@@ -3,6 +3,7 @@ import type { RootState } from "../store";
 
 export const baseApi = createApi({
   reducerPath: "api",
+  tagTypes: ["Posts"],
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
@@ -30,7 +31,17 @@ export const baseApi = createApi({
         body: userData,
       }),
     }),
+
+    createPost: builder.mutation({
+      query: (postData) => ({
+        url: "/post/create-post",
+        method: "POST",
+        body: postData,
+      }),
+      invalidatesTags: ["Posts"],
+    }),
+    
   }),
 });
 
-export const { useRegisterUserMutation, useLoginMutation } = baseApi;
+export const { useRegisterUserMutation, useLoginMutation, useCreatePostMutation } = baseApi;

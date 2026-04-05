@@ -19,7 +19,7 @@ const loginUser = async (payload: ILoginUser) => {
     user.password,
   );
   if (!isPasswordMatched) {
-    throw new AppError(StatusCodes.FORBIDDEN, "Password is incorrect");
+    throw new AppError(StatusCodes.FORBIDDEN, "Email or Password is incorrect");
   }
 
   // Prepare JWT payload

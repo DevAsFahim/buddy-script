@@ -32,7 +32,12 @@ const LoginFrom = () => {
       toast.success("Logged in successfully", { id: toastId, duration: 2000 });
       navigate(`/feed`);
     } catch (err) {
-      toast.error("Failed to Login", { id: toastId, duration: 2000 });
+      toast.error(
+        (err as IBackendError).data.errorSources[0].message
+          ? (err as IBackendError).data.errorSources[0].message
+          : "Failed to Login",
+        { id: toastId, duration: 2000 },
+      );
       console.log(err);
     }
   };
