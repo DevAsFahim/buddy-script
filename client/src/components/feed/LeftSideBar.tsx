@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const LeftSideBar = () => {
   return (
@@ -11,7 +12,7 @@ const LeftSideBar = () => {
             </h4>
             <ul className="_left_inner_area_explore_list">
               <li className="_left_inner_area_explore_item _explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -25,11 +26,11 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Learning
-                </a>{" "}
+                </Link>{" "}
                 <span className="_left_inner_area_explore_link_txt">New</span>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -43,11 +44,11 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Insights
-                </a>
+                </Link>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a
-                  href="find-friends.html"
+                <Link
+                  to="find-friends.html"
                   className="_left_inner_area_explore_link"
                 >
                   <svg
@@ -63,10 +64,10 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Find friends
-                </a>
+                </Link>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -80,10 +81,10 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Bookmarks
-                </a>
+                </Link>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a href="group.html" className="_left_inner_area_explore_link">
+                <Link to="group.html" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -102,10 +103,10 @@ const LeftSideBar = () => {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   Group
-                </a>
+                </Link>
               </li>
               <li className="_left_inner_area_explore_item _explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -119,11 +120,11 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Gaming
-                </a>{" "}
+                </Link>{" "}
                 <span className="_left_inner_area_explore_link_txt">New</span>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -137,10 +138,10 @@ const LeftSideBar = () => {
                     />
                   </svg>
                   Settings
-                </a>
+                </Link>
               </li>
               <li className="_left_inner_area_explore_item">
-                <a href="#0" className="_left_inner_area_explore_link">
+                <Link to="/" className="_left_inner_area_explore_link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -158,7 +159,7 @@ const LeftSideBar = () => {
                     <polyline points="7 3 7 8 15 8"></polyline>
                   </svg>
                   Save post
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -170,31 +171,31 @@ const LeftSideBar = () => {
                 Suggested People
               </h4>
               <span className="_left_inner_area_suggest_content_txt">
-                <a
+                <Link
+                  to="/"
                   className="_left_inner_area_suggest_content_txt_link"
-                  href="#0"
                 >
                   See All
-                </a>
+                </Link>
               </span>
             </div>
             <div className="_left_inner_area_suggest_info">
               <div className="_left_inner_area_suggest_info_box">
                 <div className="_left_inner_area_suggest_info_image">
-                  <a href="profile.html">
+                  <Link to="/">
                     <img
                       src="assets/images/people1.png"
                       alt="Image"
                       className="_info_img"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_left_inner_area_suggest_info_txt">
-                  <a href="profile.html">
+                  <Link to="/">
                     <h4 className="_left_inner_area_suggest_info_title">
                       Steve Jobs
                     </h4>
-                  </a>
+                  </Link>
                   <p className="_left_inner_area_suggest_info_para">
                     CEO of Apple
                   </p>
@@ -202,28 +203,28 @@ const LeftSideBar = () => {
               </div>
               <div className="_left_inner_area_suggest_info_link">
                 {" "}
-                <a href="#0" className="_info_link">
+                <Link to="/" className="_info_link">
                   Connect
-                </a>
+                </Link>
               </div>
             </div>
             <div className="_left_inner_area_suggest_info">
               <div className="_left_inner_area_suggest_info_box">
                 <div className="_left_inner_area_suggest_info_image">
-                  <a href="profile.html">
+                  <Link to="/">
                     <img
                       src="assets/images/people2.png"
                       alt="Image"
                       className="_info_img1"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_left_inner_area_suggest_info_txt">
-                  <a href="profile.html">
+                  <Link to="/">
                     <h4 className="_left_inner_area_suggest_info_title">
                       Ryan Roslansky
                     </h4>
-                  </a>
+                  </Link>
                   <p className="_left_inner_area_suggest_info_para">
                     CEO of Linkedin
                   </p>
@@ -231,28 +232,28 @@ const LeftSideBar = () => {
               </div>
               <div className="_left_inner_area_suggest_info_link">
                 {" "}
-                <a href="#0" className="_info_link">
+                <Link to="/" className="_info_link">
                   Connect
-                </a>
+                </Link>
               </div>
             </div>
             <div className="_left_inner_area_suggest_info">
               <div className="_left_inner_area_suggest_info_box">
                 <div className="_left_inner_area_suggest_info_image">
-                  <a href="profile.html">
+                  <Link to="/">
                     <img
                       src="assets/images/people3.png"
                       alt="Image"
                       className="_info_img1"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_left_inner_area_suggest_info_txt">
-                  <a href="profile.html">
+                  <Link to="/">
                     <h4 className="_left_inner_area_suggest_info_title">
                       Dylan Field
                     </h4>
-                  </a>
+                  </Link>
                   <p className="_left_inner_area_suggest_info_para">
                     CEO of Figma
                   </p>
@@ -260,9 +261,9 @@ const LeftSideBar = () => {
               </div>
               <div className="_left_inner_area_suggest_info_link">
                 {" "}
-                <a href="#0" className="_info_link">
+                <Link to="/" className="_info_link">
                   Connect
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -271,11 +272,11 @@ const LeftSideBar = () => {
           <div className="_left_inner_area_event _padd_t24  _padd_b6 _padd_r24 _padd_l24 _b_radious6 _feed_inner_area">
             <div className="_left_inner_event_content">
               <h4 className="_left_inner_event_title _title5">Events</h4>
-              <a href="event.html" className="_left_inner_event_link">
+              <Link to="/" className="_left_inner_event_link">
                 See all
-              </a>
+              </Link>
             </div>
-            <a className="_left_inner_event_card_link" href="event-single.html">
+            <Link className="_left_inner_event_card_link" to="/">
               <div className="_left_inner_event_card">
                 <div className="_left_inner_event_card_iamge">
                   <img
@@ -298,13 +299,13 @@ const LeftSideBar = () => {
                 <hr className="_underline" />
                 <div className="_left_inner_event_bottom">
                   <p className="_left_iner_event_bottom">17 People Going</p>{" "}
-                  <a href="#0" className="_left_iner_event_bottom_link">
+                  <button className="_left_iner_event_bottom_link">
                     Going
-                  </a>
+                  </button>
                 </div>
               </div>
-            </a>
-            <a className="_left_inner_event_card_link" href="event-single.html">
+            </Link>
+            <Link className="_left_inner_event_card_link" to="/">
               <div className="_left_inner_event_card">
                 <div className="_left_inner_event_card_iamge">
                   <img
@@ -327,12 +328,12 @@ const LeftSideBar = () => {
                 <hr className="_underline" />
                 <div className="_left_inner_event_bottom">
                   <p className="_left_iner_event_bottom">17 People Going</p>{" "}
-                  <a href="#0" className="_left_iner_event_bottom_link">
+                  <button className="_left_iner_event_bottom_link">
                     Going
-                  </a>
+                  </button>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

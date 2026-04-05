@@ -13,9 +13,9 @@ const PostFrom = () => {
   const [content, setContent] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [showImage, setShowImage] = useState<string | null>(null);
+  const [visibility, setVisibility] = useState<"public" | "private">("public");
 
   const fileInputRef = useRef<HTMLInputElement>(null);
-
   const [createPost, { isLoading }] = useCreatePostMutation();
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const PostFrom = () => {
     const formData = new FormData();
 
     formData.append("content", content);
-    formData.append("visibility", "public");
+    formData.append("visibility", visibility);
     if (image) {
       formData.append("image", image);
     }
@@ -42,6 +42,7 @@ const PostFrom = () => {
       await createPost(formData).unwrap();
       setContent("");
       setImage(null);
+      setVisibility("public");
       toast.success("Post created successfully", {
         id: toastId,
         duration: 2000,
@@ -112,6 +113,28 @@ const PostFrom = () => {
               Photo
             </button>
           </div>
+
+          {/* Visibility Switch */}
+          <div className="_feed_inner_text_area_bottom_visibility _feed_common _mar_l16">
+            <select
+              value={visibility}
+              onChange={(e) =>
+                setVisibility(e.target.value as "public" | "private")
+              }
+              style={{
+                border: "1px solid #ddd",
+                borderRadius: "4px",
+                padding: "4px 8px",
+                fontSize: "14px",
+                cursor: "pointer",
+                backgroundColor: "#f8f9fa",
+              }}
+            >
+              <option value="public">🌍 Public</option>
+              <option value="private">🔒 Private</option>
+            </select>
+          </div>
+
           {/* <div className="_feed_inner_text_area_bottom_video _feed_common">
             <button
               type="button"
@@ -180,6 +203,28 @@ const PostFrom = () => {
                 </span>
               </button>
             </div>
+
+            {/* Visibility Switch */}
+            <div className="_feed_inner_text_area_bottom_visibility _feed_common _mar_l16">
+              <select
+                value={visibility}
+                onChange={(e) =>
+                  setVisibility(e.target.value as "public" | "private")
+                }
+                style={{
+                  border: "1px solid #ddd",
+                  borderRadius: "4px",
+                  padding: "4px 8px",
+                  fontSize: "14px",
+                  cursor: "pointer",
+                  backgroundColor: "#f8f9fa",
+                }}
+              >
+                <option value="public">🌍 Public</option>
+                <option value="private">🔒 Private</option>
+              </select>
+            </div>
+
             {/* <div className="_feed_inner_text_area_bottom_video _feed_common">
               <button
                 type="button"

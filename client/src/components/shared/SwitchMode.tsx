@@ -1,5 +1,3 @@
-import React from "react";
-
 const SwitchMode = () => {
   return (
     <div className="_layout_mode_swithing_btn">

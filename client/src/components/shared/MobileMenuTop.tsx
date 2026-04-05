@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const MobileMenuTop = () => {
   return (
     <div className="_header_mobile_menu">
@@ -8,17 +10,17 @@ const MobileMenuTop = () => {
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div className="_header_mobile_menu_top_inner">
                   <div className="_header_mobile_menu_logo">
-                    <a href="feed.html" className="_mobile_logo_link">
+                    <Link to="feed.html" className="_mobile_logo_link">
                       <img
                         src="assets/images/logo.svg"
                         alt="Image"
                         className="_nav_logo"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_header_mobile_menu_right">
                     <form className="_header_form_grp">
-                      <a href="#0" className="_header_mobile_search">
+                      <Link to="/" className="_header_mobile_search">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="17"
@@ -33,7 +35,7 @@ const MobileMenuTop = () => {
                             d="M16 16l-3-3"
                           />
                         </svg>
-                      </a>
+                      </Link>
                     </form>
                     {/* <!-- <div className="_header_mobile_toggle">
 												<form action="/mobileMenu.html">

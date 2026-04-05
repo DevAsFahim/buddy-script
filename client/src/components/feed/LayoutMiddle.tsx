@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import FeedStory from "./FeedStory";
 import PostFrom from "./PostFrom";
 
@@ -28,13 +29,13 @@ const LayoutMiddle = () => {
                       Karim Saif
                     </h4>
                     <p className="_feed_inner_timeline_post_box_para">
-                      5 minute ago .<a href="#0">Public</a>
+                      5 minute ago .<Link to="/">Public</Link>
                     </p>
                   </div>
                 </div>
                 <div className="_feed_inner_timeline_post_box_dropdown">
                   <div className="_feed_timeline_post_dropdown">
-                    {/* href="#0" */}
+                    {/* href="/" */}
                     <button
                       id="_timeline_show_drop_btn"
                       className="_feed_timeline_post_dropdown_link"
@@ -58,7 +59,7 @@ const LayoutMiddle = () => {
                   >
                     <ul className="_feed_timeline_dropdown_list">
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +78,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Save Post
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -98,10 +99,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Turn On Notification
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -120,10 +121,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Hide
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -149,10 +150,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Edit Post
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +172,7 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Delete Post
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -219,9 +220,9 @@ const LayoutMiddle = () => {
               </div>
               <div className="_feed_inner_timeline_total_reacts_txt">
                 <p className="_feed_inner_timeline_total_reacts_para1">
-                  <a href="#0">
+                  <Link to="/">
                     <span>12</span> Comment
-                  </a>
+                  </Link>
                 </p>
                 <p className="_feed_inner_timeline_total_reacts_para2">
                   <span>122</span> Share
@@ -377,23 +378,23 @@ const LayoutMiddle = () => {
               </div>
               <div className="_comment_main">
                 <div className="_comment_image">
-                  <a href="profile.html" className="_comment_image_link">
+                  <Link to="profile.html" className="_comment_image_link">
                     <img
                       src="assets/images/txt_img.png"
                       alt=""
                       className="_comment_img1"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_comment_area">
                   <div className="_comment_details">
                     <div className="_comment_details_top">
                       <div className="_comment_name">
-                        <a href="profile.html ">
+                        <Link to="profile.html ">
                           <h4 className="_comment_name_title">
                             Radovan SkillArena
                           </h4>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="_comment_status">
@@ -538,13 +539,13 @@ const LayoutMiddle = () => {
                       Karim Saif
                     </h4>
                     <p className="_feed_inner_timeline_post_box_para">
-                      5 minute ago .<a href="#0">Public</a>
+                      5 minute ago .<Link to="/">Public</Link>
                     </p>
                   </div>
                 </div>
                 <div className="_feed_inner_timeline_post_box_dropdown">
                   <div className="_feed_timeline_post_dropdown">
-                    {/* href="#0" */}
+                    {/* href="/" */}
                     <button className="_feed_timeline_post_dropdown_link">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -562,7 +563,7 @@ const LayoutMiddle = () => {
                   <div className="_feed_timeline_dropdown">
                     <ul className="_feed_timeline_dropdown_list">
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -581,10 +582,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Save Post
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -602,10 +603,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Turn On Notification
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -624,10 +625,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Hide
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -653,10 +654,10 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Edit Post
-                        </a>
+                        </Link>
                       </li>
                       <li className="_feed_timeline_dropdown_item">
-                        <a href="#0" className="_feed_timeline_dropdown_link">
+                        <Link to="/" className="_feed_timeline_dropdown_link">
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -675,7 +676,7 @@ const LayoutMiddle = () => {
                             </svg>
                           </span>
                           Delete Post
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -879,23 +880,23 @@ const LayoutMiddle = () => {
               </div>
               <div className="_comment_main">
                 <div className="_comment_image">
-                  <a href="profile.html" className="_comment_image_link">
+                  <Link to="profile.html" className="_comment_image_link">
                     <img
                       src="assets/images/txt_img.png"
                       alt=""
                       className="_comment_img1"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_comment_area">
                   <div className="_comment_details">
                     <div className="_comment_details_top">
                       <div className="_comment_name">
-                        <a href="profile.html ">
+                        <Link to="profile.html ">
                           <h4 className="_comment_name_title">
                             Radovan SkillArena
                           </h4>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="_comment_status">

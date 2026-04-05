@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router";
 
 const FeedStory = () => {
   return (
@@ -122,7 +122,7 @@ const FeedStory = () => {
         <div className="_feed_inner_ppl_card_area">
           <ul className="_feed_inner_ppl_card_area_list">
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story">
                   <img
                     src="assets/images/mobile_story_img.png"
@@ -149,10 +149,10 @@ const FeedStory = () => {
                   </div>
                 </div>
                 <p className="_feed_inner_ppl_card_area_link_txt">Your Story</p>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story_active">
                   <img
                     src="assets/images/mobile_story_img1.png"
@@ -161,10 +161,10 @@ const FeedStory = () => {
                   />
                 </div>
                 <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story_inactive">
                   <img
                     src="assets/images/mobile_story_img2.png"
@@ -173,11 +173,10 @@ const FeedStory = () => {
                   />
                 </div>
                 <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
-                <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                   <div className="_feed_inner_ppl_card_area_story_active">
                     <img
                       src="assets/images/mobile_story_img1.png"
@@ -186,11 +185,10 @@ const FeedStory = () => {
                     />
                   </div>
                   <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-                </a>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story_inactive">
                   <img
                     src="assets/images/mobile_story_img2.png"
@@ -199,11 +197,10 @@ const FeedStory = () => {
                   />
                 </div>
                 <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
-                <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                   <div className="_feed_inner_ppl_card_area_story_active">
                     <img
                       src="assets/images/mobile_story_img1.png"
@@ -212,11 +209,10 @@ const FeedStory = () => {
                     />
                   </div>
                   <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-                </a>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story">
                   <img
                     src="assets/images/mobile_story_img.png"
@@ -225,10 +221,10 @@ const FeedStory = () => {
                   />
                 </div>
                 <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-              </a>
+              </Link>
             </li>
             <li className="_feed_inner_ppl_card_area_item">
-              <a href="#0" className="_feed_inner_ppl_card_area_link">
+              <Link to="/" className="_feed_inner_ppl_card_area_link">
                 <div className="_feed_inner_ppl_card_area_story_active">
                   <img
                     src="assets/images/mobile_story_img1.png"
@@ -237,7 +233,7 @@ const FeedStory = () => {
                   />
                 </div>
                 <p className="_feed_inner_ppl_card_area_txt">Ryan...</p>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

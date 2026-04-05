@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 const RightSidebar = () => {
   return (
@@ -10,32 +11,32 @@ const RightSidebar = () => {
                 You Might Like
               </h4>
               <span className="_right_inner_area_info_content_txt">
-                <a
+                <Link
                   className="_right_inner_area_info_content_txt_link"
-                  href="#0"
+                  to="#0"
                 >
                   See All
-                </a>
+                </Link>
               </span>
             </div>
             <hr className="_underline" />
             <div className="_right_inner_area_info_ppl">
               <div className="_right_inner_area_info_box">
                 <div className="_right_inner_area_info_box_image">
-                  <a href="profile.html">
+                  <Link to="profile.html">
                     <img
                       src="assets/images/Avatar.png"
                       alt="Image"
                       className="_ppl_img"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="_right_inner_area_info_box_txt">
-                  <a href="profile.html">
+                  <Link to="profile.html">
                     <h4 className="_right_inner_area_info_box_title">
                       Radovan SkillArena
                     </h4>
-                  </a>
+                  </Link>
                   <p className="_right_inner_area_info_box_para">
                     Founder & CEO at Trophy
                   </p>
@@ -63,12 +64,12 @@ const RightSidebar = () => {
                   Your Friends
                 </h4>
                 <span className="_feed_right_inner_area_card_content_txt">
-                  <a
+                  <Link
                     className="_feed_right_inner_area_card_content_txt_link"
-                    href="find-friends.html"
+                    to="find-friends.html"
                   >
                     See All
-                  </a>
+                  </Link>
                 </span>
               </div>
               <form className="_feed_right_inner_area_card_form">
@@ -99,20 +100,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl _feed_right_inner_area_card_ppl_inactive ">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people1.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Steve Jobs
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Apple
                     </p>
@@ -126,20 +127,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people2.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Ryan Roslansky
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Linkedin
                     </p>
@@ -169,20 +170,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people3.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Dylan Field
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Figma
                     </p>
@@ -212,20 +213,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl _feed_right_inner_area_card_ppl_inactive">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people1.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Steve Jobs
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Apple
                     </p>
@@ -239,20 +240,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people2.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Ryan Roslansky
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Linkedin
                     </p>
@@ -282,20 +283,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people3.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Dylan Field
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Figma
                     </p>
@@ -325,20 +326,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people3.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Dylan Field
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Figma
                     </p>
@@ -368,20 +369,20 @@ const RightSidebar = () => {
               <div className="_feed_right_inner_area_card_ppl _feed_right_inner_area_card_ppl_inactive">
                 <div className="_feed_right_inner_area_card_ppl_box">
                   <div className="_feed_right_inner_area_card_ppl_image">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <img
                         src="assets/images/people1.png"
                         alt=""
                         className="_box_ppl_img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="_feed_right_inner_area_card_ppl_txt">
-                    <a href="profile.html">
+                    <Link to="profile.html">
                       <h4 className="_feed_right_inner_area_card_ppl_title">
                         Steve Jobs
                       </h4>
-                    </a>
+                    </Link>
                     <p className="_feed_right_inner_area_card_ppl_para">
                       CEO of Apple
                     </p>

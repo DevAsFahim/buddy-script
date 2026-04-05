@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const MobileMenuBottom = () => {
   return (
@@ -9,8 +10,8 @@ const MobileMenuBottom = () => {
             <div className="col-xl-12 col-lg-12 col-md-12">
               <ul className="_mobile_navigation_bottom_list">
                 <li className="_mobile_navigation_bottom_item">
-                  <a
-                    href="feed.html"
+                  <Link
+                    to="/"
                     className="_mobile_navigation_bottom_link _mobile_navigation_bottom_link_active"
                   >
                     <svg
@@ -37,11 +38,11 @@ const MobileMenuBottom = () => {
                         d="M9.07 18.497h5.857v7.253H9.07v-7.253z"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li className="_mobile_navigation_bottom_item">
-                  <a
-                    href="friend-request.html"
+                  <Link
+                    to="friend-request.html"
                     className="_mobile_navigation_bottom_link"
                   >
                     <svg
@@ -60,10 +61,10 @@ const MobileMenuBottom = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li className="_mobile_navigation_bottom_item">
-                  <a href="no" className="_mobile_navigation_bottom_link">
+                  <Link to="no" className="_mobile_navigation_bottom_link">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="25"
@@ -81,11 +82,11 @@ const MobileMenuBottom = () => {
                       />
                     </svg>
                     <span className="_counting">6</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="_mobile_navigation_bottom_item">
-                  <a
-                    href="chat_list(for_mbl).html"
+                  <Link
+                    to="chat_list(for_mbl).html"
                     className="_mobile_navigation_bottom_link"
                   >
                     <svg
@@ -105,7 +106,7 @@ const MobileMenuBottom = () => {
                       />
                     </svg>
                     <span className="_counting">2</span>
-                  </a>
+                  </Link>
                 </li>
                 <div className="_header_mobile_toggle">
                   <form action="/mobileMenu.html">
@@ -132,13 +133,13 @@ const MobileMenuBottom = () => {
                   </form>
                 </div>
                 {/* <!-- <li className="_mobile_navigation_bottom_item">
-										<a href="profile.html" className="_mobile_navigation_bottom_link">
+										<Link to="profile.html" className="_mobile_navigation_bottom_link">
 											<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none" viewBox="0 0 29 28">
 												<g opacity=".6">
 												  <path className="_mobile_svg1 _dark_svg" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M23.999 24.5v-2.333a4.667 4.667 0 00-4.667-4.667H9.999a4.667 4.667 0 00-4.667 4.667V24.5M14.667 12.833a4.667 4.667 0 100-9.333 4.667 4.667 0 000 9.333z"/>
 												</g>
 											</svg>											  
-										</a>
+										</Link>
 									</li> --> */}
               </ul>
             </div>

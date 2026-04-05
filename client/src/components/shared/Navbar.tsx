@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
     const [showNotification, setShowNotification] = useState(false);
@@ -20,13 +21,13 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light _header_nav _padd_t10">
       <div className="container _custom_container">
         <div className="_logo_wrap">
-          <a className="navbar-brand" href="feed.html">
+          <Link className="navbar-brand" to="feed.html">
             <img
               src="assets/images/logo.svg"
               alt="Image"
               className="_nav_logo"
             />
-          </a>
+          </Link>
         </div>
         <button
           className="navbar-toggler bg-light"
@@ -64,10 +65,10 @@ const Navbar = () => {
           </div>
           <ul className="navbar-nav mb-2 mb-lg-0 _header_nav_list ms-auto _mar_r8">
             <li className="nav-item _header_nav_item">
-              <a
+              <Link
                 className="nav-link _header_nav_link_active _header_nav_link"
                 aria-current="page"
-                href="feed.html"
+                to="feed.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,13 +94,13 @@ const Navbar = () => {
                     d="M11.857 19.341v-5.857a1 1 0 00-1-1H7.143a1 1 0 00-1 1v5.857"
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li className="nav-item _header_nav_item">
-              <a
+              <Link
                 className="nav-link _header_nav_link"
                 aria-current="page"
-                href="friend-request.html"
+                to="friend-request.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +117,7 @@ const Navbar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li className="nav-item _header_nav_item">
               <span
@@ -575,10 +576,10 @@ const Navbar = () => {
               </span>
             </li>
             <li className="nav-item _header_nav_item">
-              <a
+              <Link
                 className="nav-link _header_nav_link"
                 aria-current="page"
-                href="chat.html"
+                to="chat.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -596,7 +597,7 @@ const Navbar = () => {
                   />
                 </svg>{" "}
                 <span className="_counting">2</span>
-              </a>
+              </Link>
             </li>
           </ul>
           <div onClick={handleProfile} className="_header_nav_profile">
@@ -643,15 +644,15 @@ const Navbar = () => {
                 </div>
                 <div className="_nav_profile_dropdown_info_txt">
                   <h4 className="_nav_dropdown_title">Dylan Field</h4>
-                  <a href="profile.html" className="_nav_drop_profile">
+                  <Link to="profile.html" className="_nav_drop_profile">
                     View Profile
-                  </a>
+                  </Link>
                 </div>
               </div>
               <hr />
               <ul className="_nav_dropdown_list">
                 <li className="_nav_dropdown_list_item">
-                  <a href="#0" className="_nav_dropdown_link">
+                  <Link to="#0" className="_nav_dropdown_link">
                     <div className="_nav_drop_info">
                       <span>
                         <svg
@@ -684,10 +685,10 @@ const Navbar = () => {
                         />
                       </svg>
                     </button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="_nav_dropdown_list_item">
-                  <a href="#0" className="_nav_dropdown_link">
+                  <Link to="#0" className="_nav_dropdown_link">
                     <div className="_nav_drop_info">
                       <span>
                         <svg
@@ -730,10 +731,10 @@ const Navbar = () => {
                         />
                       </svg>
                     </button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="_nav_dropdown_list_item">
-                  <a href="#0" className="_nav_dropdown_link">
+                  <Link to="#0" className="_nav_dropdown_link">
                     <div className="_nav_drop_info">
                       <span>
                         <svg
@@ -769,7 +770,7 @@ const Navbar = () => {
                         />
                       </svg>
                     </button>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
