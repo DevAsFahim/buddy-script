@@ -21,4 +21,7 @@ router.post(
   postController.createPost,
 );
 
+router.get("/", auth(), postController.getAllPosts);
+
+
 export const PostRouter = router;
