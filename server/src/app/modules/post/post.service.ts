@@ -10,7 +10,7 @@ const createPostIntoDB = async (payload: any) => {
 };
 
 const getAllPostsFromDB = async (userId: string) => {
-  // Query: Public posts OR posts where the requester is the author
+  
   const result = await Post.find({
     $or: [{ visibility: "public" }, { author: userId }],
   })
