@@ -1,4 +1,3 @@
-import React from "react";
 
 const RightSidebar = () => {
   return (
@@ -84,7 +83,7 @@ const RightSidebar = () => {
                   <circle cx="7" cy="7" r="6" stroke="#666"></circle>
                   <path
                     stroke="#666"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     d="M16 16l-3-3"
                   ></path>
                 </svg>
@@ -161,7 +160,7 @@ const RightSidebar = () => {
                       y="1"
                       fill="#0ACF83"
                       stroke="#fff"
-                      stroke-width="2"
+                      strokeWidth="2"
                       rx="6"
                     />
                   </svg>
@@ -204,7 +203,7 @@ const RightSidebar = () => {
                       y="1"
                       fill="#0ACF83"
                       stroke="#fff"
-                      stroke-width="2"
+                      strokeWidth="2"
                       rx="6"
                     />
                   </svg>
@@ -274,7 +273,7 @@ const RightSidebar = () => {
                       y="1"
                       fill="#0ACF83"
                       stroke="#fff"
-                      stroke-width="2"
+                      strokeWidth="2"
                       rx="6"
                     />
                   </svg>
@@ -317,7 +316,7 @@ const RightSidebar = () => {
                       y="1"
                       fill="#0ACF83"
                       stroke="#fff"
-                      stroke-width="2"
+                      strokeWidth="2"
                       rx="6"
                     />
                   </svg>
@@ -360,7 +359,7 @@ const RightSidebar = () => {
                       y="1"
                       fill="#0ACF83"
                       stroke="#fff"
-                      stroke-width="2"
+                      strokeWidth="2"
                       rx="6"
                     />
                   </svg>

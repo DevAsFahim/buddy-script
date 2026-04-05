@@ -29,7 +29,7 @@ const MobileMenuTop = () => {
                           <circle cx="7" cy="7" r="6" stroke="#666" />
                           <path
                             stroke="#666"
-                            stroke-linecap="round"
+                            strokeLinecap="round"
                             d="M16 16l-3-3"
                           />
                         </svg>
@@ -39,7 +39,7 @@ const MobileMenuTop = () => {
 												<form action="/mobileMenu.html">
 													<button type="submit" className="_header_mobile_btn_link" value="go to mobile menu">
 														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" viewBox="0 0 18 14">
-															<path stroke="#666" stroke-linecap="round" stroke-width="1.5" d="M1 1h16M1 7h16M1 13h16"/>
+															<path stroke="#666" strokeLinecap="round" strokeWidth="1.5" d="M1 1h16M1 7h16M1 13h16"/>
 														</svg>													  
 													</button>
 												</form>
