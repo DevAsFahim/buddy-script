@@ -7,8 +7,8 @@ type TUserState = {
 };
 
 const initialState: TUserState = {
-  user: null,
-  token: null,
+  user: JSON.parse(localStorage.getItem("user") || "null"),
+  token: localStorage.getItem("token"),
 };
 
 const userSlice = createSlice({
@@ -19,10 +19,16 @@ const userSlice = createSlice({
       const { user, token } = action.payload;
       state.user = user;
       state.token = token;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
     },
     logOut: (state) => {
       state.user = null;
       state.token = null;
+
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
     },
   },
 });
