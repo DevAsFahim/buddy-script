@@ -10,7 +10,7 @@ const createPost = catchAsync(async (req, res) => {
 
   // Handle the image if it exists in the request
   if (req.file) {
-    imageUrl = await uploadToCloudinary(req.file.path);
+    imageUrl = await uploadToCloudinary(req.file);
   }
 
   // Merge form-data fields and the Cloudinary URL

@@ -1,5 +1,4 @@
-import { v2 as cloudinary } from "cloudinary";
-import fs from "fs";
+import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 import config from "../config";
 import AppError from "../error/AppError";
 import { StatusCodes } from "http-status-codes";
@@ -10,16 +9,23 @@ cloudinary.config({
   api_secret: config.cloudinary_api_secret as string,
 });
 
-export const uploadToCloudinary = async (filePath: string): Promise<string> => {
-  try {
-    const result = await cloudinary.uploader.upload(filePath, {
-      folder: "social_media_posts",
-    });
-    
-    fs.unlinkSync(filePath);
-    return result.secure_url;
-  } catch (error) {
-    fs.unlinkSync(filePath);
-    throw new AppError(StatusCodes.BAD_REQUEST, "Cloudinary upload failed");
-  }
+export const uploadToCloudinary = async (
+  file: Express.Multer.File, // Accept the full multer file object
+): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      { folder: "social_media_posts" },
+      (error, result) => {
+        if (error) {
+          return reject(
+            new AppError(StatusCodes.BAD_REQUEST, "Cloudinary upload failed"),
+          );
+        }
+        resolve(result!.secure_url);
+      },
+    );
+
+    // Write the buffer to the stream
+    uploadStream.end(file.buffer);
+  });
 };
