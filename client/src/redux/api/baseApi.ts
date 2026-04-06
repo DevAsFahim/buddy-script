@@ -5,7 +5,8 @@ export const baseApi = createApi({
   reducerPath: "api",
   tagTypes: ["Posts", "Comments", "Likes", "User"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://buddy-script-server-lyart.vercel.app/api/v1",
+    // https://buddy-script-server-lyart.vercel.app/api/v1
+    baseUrl: "localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).user.token;
 
@@ -16,6 +17,7 @@ export const baseApi = createApi({
       return headers;
     },
   }),
+
   endpoints: (builder) => ({
     registerUser: builder.mutation({
       query: (userData) => ({
