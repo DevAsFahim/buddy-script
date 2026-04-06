@@ -3,7 +3,7 @@ import type { RootState } from "../store";
 
 export const baseApi = createApi({
   reducerPath: "api",
-  tagTypes: ["Posts"],
+  tagTypes: ["Posts", "Comments", "Likes"],
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
@@ -40,8 +40,55 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["Posts"],
     }),
-    
+
+    getFeed: builder.query({
+      query: () => "/post/feed",
+      providesTags: ["Posts"],
+    }),
+
+    toggleLike: builder.mutation({
+      query: (data) => ({
+        url: "/like/toggle",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["Posts", "Comments", "Likes"],
+    }),
+
+    createComment: builder.mutation({
+      query: (data) => ({
+        url: "/comment",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["Comments", "Posts"],
+    }),
+
+    getLikers: builder.query({
+      query: (targetId) => `/like/${targetId}`,
+      providesTags: ["Likes"],
+    }),
+
+    getComments: builder.query({
+      query: (postId) => `/comment/${postId}`,
+      providesTags: ["Comments"],
+    }),
+
+    getMe: builder.query({
+      query: () => "/user/me",
+    }),
+
   }),
 });
 
-export const { useRegisterUserMutation, useLoginMutation, useCreatePostMutation } = baseApi;
+export const {
+  useRegisterUserMutation,
+  useLoginMutation,
+  useCreatePostMutation,
+  useGetFeedQuery,
+  useToggleLikeMutation,
+  useCreateCommentMutation,
+  useGetLikersQuery, 
+  useGetCommentsQuery,
+  useGetMeQuery
+} = baseApi;

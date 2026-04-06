@@ -21,7 +21,7 @@ router.post(
   postController.createPost,
 );
 
-router.get("/", auth(), postController.getAllPosts);
+router.get("/feed", auth(), postController.getAllPosts);
 
 
 export const PostRouter = router;

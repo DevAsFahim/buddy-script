@@ -4,7 +4,8 @@ import { postService } from "./post.service";
 import { uploadToCloudinary } from "../../utils/cloudinary";
 
 const createPost = catchAsync(async (req, res) => {
-  const authorId = req.user._id;
+  const authorId = req.user?.userId;
+  
   let imageUrl = null;
 
   // Handle the image if it exists in the request
@@ -29,7 +30,7 @@ const createPost = catchAsync(async (req, res) => {
 });
 
 const getAllPosts = catchAsync(async (req, res) => {
-  const userId = req.user._id;
+  const userId = req.user?.userId;
   const result = await postService.getAllPostsFromDB(userId);
 
   res.status(StatusCodes.OK).json({

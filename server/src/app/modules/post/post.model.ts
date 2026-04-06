@@ -30,8 +30,17 @@ const postSchema = new Schema<IPost>(
   }
 );
 
-postSchema.index({ visibility: 1, createdAt: -1 });
+postSchema.virtual('likesCount', {
+  ref: 'Like',
+  localField: '_id',
+  foreignField: 'targetId',
+  count: true
+});
 
+postSchema.set('toJSON', { virtuals: true });
+postSchema.set('toObject', { virtuals: true });
+
+postSchema.index({ visibility: 1, createdAt: -1 });
 postSchema.index({ author: 1, createdAt: -1 });
 
 export const Post = model<IPost>('Post', postSchema);
