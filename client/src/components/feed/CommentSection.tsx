@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   useCreateCommentMutation,
   useGetCommentsQuery,
+  useGetMeQuery,
 } from "../../redux/api/baseApi";
 import { toast } from "sonner";
 import CommentItem from "./CommentItem";
@@ -10,6 +11,7 @@ import SendPostIcon from "../../svgIcons/SendPostIcon";
 const CommentSection = ({ postId }: { postId: string }) => {
   const [text, setText] = useState("");
   const [createComment, { isLoading }] = useCreateCommentMutation();
+  const { data: user } = useGetMeQuery(undefined);
 
   // RTK Query fetches data and handles loading/error states
   const { data: response, isLoading: commentsLoading } =
@@ -44,9 +46,9 @@ const CommentSection = ({ postId }: { postId: string }) => {
           >
             <div className="_feed_inner_comment_box_content">
               <div className="_feed_inner_comment_box_content_image">
-                <img
-                  src="/assets/images/comment_img.png"
-                  alt=""
+                <img 
+                  src={user?.data?.profilePicture || "/assets/images/comment_img.png"}
+                  alt="user"
                   className="_comment_img"
                 />
               </div>

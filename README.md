@@ -1,4 +1,5 @@
 # 🚀 BuddyScript - Social Connectivity Platform
+[Live Demo](https://buddy-script-henna.vercel.app/)
 
 BuddyScript is a full-stack social media application designed for seamless user interaction. It features a robust authentication system, dynamic post feeds, and a sophisticated nested commenting system built for performance and scalability.
 
@@ -7,7 +8,7 @@ BuddyScript is a full-stack social media application designed for seamless user 
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, Redux Toolkit (RTK Query), TypeScript, Sonner (Toasts).
-- **Backend:** Node.js, Express.js, Mongoose (MongoDB).
+- **Backend:** Node.js, TypeScript, Express.js, Mongoose (MongoDB).
 - **Validation:** Zod (Schema Validation) & Express-Validator.
 - **Security:** JWT (JSON Web Tokens), Bcrypt (Password Hashing).
 

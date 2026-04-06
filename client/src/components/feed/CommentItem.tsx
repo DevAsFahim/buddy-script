@@ -38,7 +38,7 @@ const CommentItem = ({ comment, allComments, postId }: CommentItemProps) => {
   return (
     <div className="_comment_main" style={{ marginBottom: "10px", borderLeft: comment.parentId ? "2px solid #ddd" : "none", paddingLeft: comment.parentId ? "15px" : "0" }}>
       <div className="_comment_image">
-        <img src="/assets/images/txt_img.png" className="_comment_img1" alt="" />
+        <img src={comment.author.profilePicture} className="_comment_img1" alt="" />
       </div>
       <div className="_comment_area">
         <div className="_comment_details">
