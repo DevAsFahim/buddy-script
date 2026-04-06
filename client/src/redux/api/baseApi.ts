@@ -3,7 +3,7 @@ import type { RootState } from "../store";
 
 export const baseApi = createApi({
   reducerPath: "api",
-  tagTypes: ["Posts", "Comments", "Likes"],
+  tagTypes: ["Posts", "Comments", "Likes", "User"],
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
@@ -75,7 +75,11 @@ export const baseApi = createApi({
     }),
 
     getMe: builder.query({
-      query: () => "/user/me",
+      query: () => ({
+        url: "/user/me",
+        method: "GET",
+      }),
+      providesTags: ["User"],
     }),
 
   }),

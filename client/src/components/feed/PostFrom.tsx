@@ -5,7 +5,7 @@ import PostEditIcon from "../../svgIcons/PostEditIcon";
 import PostGalleryIcon from "../../svgIcons/PostGalleryIcon";
 import PostVideoIcon from "../../svgIcons/PostVideoIcon";
 import SendPostIcon from "../../svgIcons/SendPostIcon";
-import { useCreatePostMutation } from "../../redux/api/baseApi";
+import { useCreatePostMutation, useGetMeQuery } from "../../redux/api/baseApi";
 import { toast } from "sonner";
 import type { IBackendError } from "../../type/backendError.type";
 
@@ -14,6 +14,7 @@ const PostFrom = () => {
   const [image, setImage] = useState<File | null>(null);
   const [showImage, setShowImage] = useState<string | null>(null);
   const [visibility, setVisibility] = useState<"public" | "private">("public");
+  const { data: user, isLoading: userLoading } = useGetMeQuery(undefined);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [createPost, { isLoading }] = useCreatePostMutation();
@@ -63,7 +64,7 @@ const PostFrom = () => {
       <div className="_feed_inner_text_area_box">
         <div className="_feed_inner_text_area_box_image">
           <img
-            src="assets/images/txt_img.png"
+            src={user?.data?.profilePicture || "assets/images/txt_img.png"}
             alt="Image"
             className="_txt_img"
           />

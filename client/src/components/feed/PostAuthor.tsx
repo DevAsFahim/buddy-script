@@ -5,6 +5,7 @@ interface IProps {
     author: {
         firstName: string;
         lastName: string;
+        profilePicture: string;
     };
     createdAt: string;
     visibility: string;
@@ -15,7 +16,7 @@ const PostAuthor = ({author, createdAt, visibility}: IProps) => {
     <div className="_feed_inner_timeline_post_top">
       <div className="_feed_inner_timeline_post_box">
         <div className="_feed_inner_timeline_post_box_image">
-          <img src="assets/images/post_img.png" alt="" className="_post_img" />
+          <img src={author.profilePicture} alt="" className="_post_img" />
         </div>
         <div className="_feed_inner_timeline_post_box_txt">
           <h4 className="_feed_inner_timeline_post_box_title">{author.firstName + " " + author.lastName}</h4>

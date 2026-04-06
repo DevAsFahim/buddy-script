@@ -23,6 +23,12 @@ const userSchema = new mongoose.Schema<IUser>(
       required: true,
       select: false,
     },
+    profilePicture: {
+      type: String,
+      default: function () {
+        return `https://api.dicebear.com/7.x/avataaars/svg?seed=${this.email}`;
+      },
+    },
   },
   {
     timestamps: true,

@@ -17,7 +17,7 @@ const toggleLikeInDB = async (payload: ILike) => {
 
 const getLikersByTargetIdFromDB = async (targetId: string) => {
   return await Like.find({ targetId })
-    .populate("userId", "firstName lastName profileImage")
+    .populate("userId", "firstName lastName profilePicture")
     .select("userId");
 };
 

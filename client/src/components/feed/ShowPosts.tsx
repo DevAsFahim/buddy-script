@@ -6,7 +6,6 @@ import CommentSection from "./CommentSection";
 const ShowPosts = () => {
 
   const { data: posts, isLoading, isError } = useGetFeedQuery(undefined);
-  console.log(posts);
 
   if (isLoading) return <div>Loading Feed...</div>;
   if (isError) return <div>Error loading posts.</div>;

@@ -3,12 +3,15 @@ import { Outlet } from "react-router";
 import SwitchMode from "../components/shared/SwitchMode";
 import MobileMenuTop from "../components/shared/MobileMenuTop";
 import MobileMenuBottom from "../components/shared/MobileMenuBottom";
+import { useState } from "react";
 
 const MainLayout = () => {
+  const [darkMood, setDarkMood] = useState(false)
+  
   return (
-    <div className="_layout _layout_main_wrapper">
+    <div className={`_layout _layout_main_wrapper ${darkMood ? "_dark_wrapper" : ""}`}>
       {/* Switching Btn Start */}
-      <SwitchMode />
+      <SwitchMode darkMood={darkMood} setDarkMood={setDarkMood}  />
       {/* Switching Btn End */}
 
       <div className="_main_layout">

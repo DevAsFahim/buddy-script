@@ -1,7 +1,13 @@
-const SwitchMode = () => {
+const SwitchMode = ({
+  darkMood,
+  setDarkMood,
+}: {
+  darkMood: boolean;
+  setDarkMood: (value: boolean) => void;
+}) => {
   return (
     <div className="_layout_mode_swithing_btn">
-      <button type="button" className="_layout_swithing_btn_link">
+      <button onClick={() => setDarkMood(!darkMood)} type="button" className="_layout_swithing_btn_link">
         <div className="_layout_swithing_btn">
           <div className="_layout_swithing_btn_round"></div>
         </div>

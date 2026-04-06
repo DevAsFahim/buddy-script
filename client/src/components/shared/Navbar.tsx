@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { useGetMeQuery } from "../../redux/api/baseApi";
+import { useAppDispatch } from "../../redux/hooks";
+import { logOut } from "../../redux/user/userSlice";
 
 const Navbar = () => {
     const [showNotification, setShowNotification] = useState(false);
     const [showProfile, setShowProfile] = useState(false);
+    const dispatch = useAppDispatch();
+
+    const { data: user } = useGetMeQuery(undefined);
 
     const handleNotification = () => {
         setShowNotification(!showNotification);
@@ -21,7 +27,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light _header_nav _padd_t10">
       <div className="container _custom_container">
         <div className="_logo_wrap">
-          <Link className="navbar-brand" to="feed.html">
+          <Link className="navbar-brand" to="/feed">
             <img
               src="assets/images/logo.svg"
               alt="Image"
@@ -603,13 +609,13 @@ const Navbar = () => {
           <div onClick={handleProfile} className="_header_nav_profile">
             <div className="_header_nav_profile_image">
               <img
-                src="assets/images/profile.png"
+                src={user?.data?.profilePicture || "assets/images/profile.png"}
                 alt="Image"
                 className="_nav_profile_img"
               />
             </div>
             <div className="_header_nav_dropdown">
-              <p className="_header_nav_para">Dylan Field</p>
+              <p className="_header_nav_para">{user?.data?.firstName + " " + user?.data?.lastName}</p>
               <button
                 id="_profile_drop_show_btn"
                 className="_header_nav_dropdown_btn _dropdown_toggle"
@@ -637,14 +643,14 @@ const Navbar = () => {
               <div className="_nav_profile_dropdown_info">
                 <div className="_nav_profile_dropdown_image">
                   <img
-                    src="assets/images/profile.png"
+                    src={user?.data?.profilePicture || "assets/images/profile.png"}
                     alt="Image"
                     className="_nav_drop_img"
                   />
                 </div>
                 <div className="_nav_profile_dropdown_info_txt">
-                  <h4 className="_nav_dropdown_title">Dylan Field</h4>
-                  <Link to="profile.html" className="_nav_drop_profile">
+                  <h4 className="_nav_dropdown_title">{user?.data?.firstName + " " + user?.data?.lastName}</h4>
+                  <Link to="/" className="_nav_drop_profile">
                     View Profile
                   </Link>
                 </div>
@@ -734,7 +740,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="_nav_dropdown_list_item">
-                  <Link to="#0" className="_nav_dropdown_link">
+                  <div onClick={() => dispatch(logOut())} className="_nav_dropdown_link">
                     <div className="_nav_drop_info">
                       <span>
                         <svg
@@ -770,7 +776,7 @@ const Navbar = () => {
                         />
                       </svg>
                     </button>
-                  </Link>
+                  </div>
                 </li>
               </ul>
             </div>

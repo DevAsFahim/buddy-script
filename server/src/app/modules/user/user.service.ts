@@ -7,6 +7,11 @@ const createUserIntoDB = async (data: IUser) => {
     return result;
 };
 
+const getMeFromDB = async (userId: string) => {
+  return await User.findById(userId);
+};
+
 export const userService = {
-    createUserIntoDB
+    createUserIntoDB,
+    getMeFromDB
 };
