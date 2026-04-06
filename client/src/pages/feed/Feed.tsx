@@ -1,7 +1,6 @@
 import LayoutMiddle from "../../components/feed/LayoutMiddle";
 import LeftSideBar from "../../components/feed/LeftSideBar";
 import RightSidebar from "../../components/feed/RightSidebar";
-import Navbar from "../../components/shared/Navbar"
 
 const Feed = () => {
   return (

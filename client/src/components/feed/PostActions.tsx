@@ -5,7 +5,6 @@ import {
   useToggleLikeMutation,
 } from "../../redux/api/baseApi";
 import LikersModal from "./LikersModal";
-import CommentsModal from "./CommentsModal";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../redux/store";
 

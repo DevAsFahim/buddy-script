@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router";
 import { useCreateCommentMutation } from "../../redux/api/baseApi";
 import { toast } from "sonner";
 

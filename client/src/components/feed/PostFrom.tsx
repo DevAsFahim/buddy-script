@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import PostArticleIcon from "../../svgIcons/PostArticleIcon";
-import PostCalenderIcon from "../../svgIcons/PostCalenderIcon";
 import PostEditIcon from "../../svgIcons/PostEditIcon";
 import PostGalleryIcon from "../../svgIcons/PostGalleryIcon";
-import PostVideoIcon from "../../svgIcons/PostVideoIcon";
 import SendPostIcon from "../../svgIcons/SendPostIcon";
 import { useCreatePostMutation, useGetMeQuery } from "../../redux/api/baseApi";
 import { toast } from "sonner";
@@ -14,7 +11,7 @@ const PostFrom = () => {
   const [image, setImage] = useState<File | null>(null);
   const [showImage, setShowImage] = useState<string | null>(null);
   const [visibility, setVisibility] = useState<"public" | "private">("public");
-  const { data: user, isLoading: userLoading } = useGetMeQuery(undefined);
+  const { data: user } = useGetMeQuery(undefined);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [createPost, { isLoading }] = useCreatePostMutation();
