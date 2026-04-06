@@ -56,21 +56,6 @@ const Register = () => {
                 <h4 className="_social_registration_content_title _titl4 _mar_b50">
                   Registration
                 </h4>
-                <button
-                  type="button"
-                  className="_social_registration_content_btn _mar_b40"
-                >
-                  <img
-                    src="assets/images/google.svg"
-                    alt="Image"
-                    className="_google_img"
-                  />{" "}
-                  <span>Register with google</span>
-                </button>
-                <div className="_social_registration_content_bottom_txt _mar_b40">
-                  {" "}
-                  <span>Or</span>
-                </div>
 
                 {/* register form */}
                 <RegisterForm />
